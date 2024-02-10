@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>HTML to PDF</title>
+   <style>
+   * {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+   }
+
+   body {
+    margin: 0;
+    padding: 0;
+   }
+
+   h1 {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 50px;
+   }
+   h2 {
+    text-align: right;
+    font-size: 36px;
+   }
+   .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+   }
+   .container {
+    max-width: 500px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    border: none;
+    padding: 20px;
+   }
+   .container1 {
+    max-width: 1000px;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    border: none;
+    padding: 20px;
+   }
+   fieldset {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+   }
+   legend {
+    margin-left: 20px;
+    font-size: 20px;
+   }
+   input {
+    width: auto;
+    margin: 10px;
+    padding: 5px;
+    font-size: 18px;
+   }
+   h3 {
+    margin: 5px 0;
+   }
+   table {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    text-align: center;
+   }
+   table td,
+   table th {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #000000;
+   }
+   table tr td:last-child {
+    text-align: right;
+   }
+
+   ul li {
+    padding: 5px;
+    margin: 10px 0;
+   }
+  </style>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ </head>
+ <body>
+  <h1>EzviNet Technology</h1>
+  <div class="container-fluid">
+   <div class="container">
+    <div class="part1">
+     <fieldset>
+      <legend>Personal Information</legend>
+      Full Name: <input type="text" id="name" /> <br />
+
+      Your Email: <input type="text" id="email" /><br />
+      Your Mobile: <input type="text" id="mobile" /><br />
+	  Select  brands: <input type="text" id="namenamename" /><br />
+	  Your Site Name: <input type="text" id="namename" /><br />
+     </fieldset>
+    </div>
+
+    <div class="part2">
+     <fieldset>
+      <legend>Your Orders</legend>
+       (8A)  Cu/PVC 1/1.13mm (1mm2) Wire -Brown : <input type="text" id="smosa" /> <br />
+ (8A)  Cu/PVC 1/1.13mm (1mm2) Wire -Blue: <input type="text" id="kachori" /><br />
+ (15A) Cu/PVC 7/0.53mm (1.5mm2) Wire -Flat Twin : <input type="text" id="vadapav" /><br />
+ (20A) Cu/PVC 7/0.67mm (2.5mm2) Wire -Flat Twin : <input type="text" id="d" /><br />
+ (20A) Cu/PVC 7/0.67mm (2.5mm2) Wire -Earth : <input type="text" id="e" /><br />
+ (30A) Cu/PVC 7/0.85mm (4mm2) Wire -Flat Twin : <input type="text" id="f" /><br />
+ (39A) Cu/PVC 7/1.04mm (6mm2) Wire -Flat Twin: <input type="text" id="g" /><br />
+ (54A) Cu/PVC 7/1.35mm (10mm2) Wire -Brown : <input type="text" id="h" /><br />
+ (54A) Cu/PVC 7/1.35mm (10mm2) Wire -Blue  : <input type="text" id="i" /><br /> 
+ (70A) Cu/PVC 7/1.70mm (16mm2) Wire -Brown : <input type="text" id="j" /><br />
+ (70A) Cu/PVC 7/1.70mm (16mm2) Wire -Blue : <input type="text" id="k" /><br />
+ Cu/PVC 16/0.20mm /  2 Core Cable : <input type="text" id="l" /><br /> 
+ Cu/PVC 16/0.20mm / 3 Core Cable : <input type="text" id="m" /><br /> 
+  Cu/PVC 0.5 mm  singel  Cable : <input type="text" id="n" /><br />
+ 4mm Switch gear cable : <input type="text" id="o" /><br />
+ 10mm Switch gear cable : <input type="text" id="p" /><br />
+ 1 Gang 1Way Switches  : <input type="text" id="q" /><br />
+2 Gang 1Way Switches : <input type="text" id="r" /><br />
+3 Gang 1Way Switches : <input type="text" id="s" /><br />
+4 Gang 1Way Switches: <input type="text" id="t" /><br />
+5 Gang 1Way Switches : <input type="text" id="u" /><br />
+1 Gang 2Way Switches : <input type="text" id="v" /><br />
+2 Gang 2Way Switches: <input type="text" id="w" /><br /> 
+3 Gang 2Way Switches : <input type="text" id="x" /><br />
+4 Gang 2Way Switches  : <input type="text" id="y" /><br />
+5 Gang 2Way Switches : <input type="text" id="z" /><br />
+DOUBLE POLE SWITCH: <input type="text" id="aa" /> <br />
+    BELL PRESS: <input type="text" id="bb" /><br />
+      LIGHT DIMMER: <input type="text" id="cc" /><br />
+	  extra: <input type="text" id="extra " /><br />
+      FAN SPEED CONTROLLER: <input type="text" id="dd" /><br />
+5 STEP  FAN SPEED CONTROLLER : <input type="text" id="ee" /><br />
+SOCKET OUTLET 13A: <input type="text" id="ff" /><br />
+WATER FLOAT SWITCHES : <input type="text" id="gg" /><br />
+Key Card / Tag Switch: <input type="text" id="hh" /><br />
+CIRCUIT BREAKER  10A (MCB) : <input type="text" id="ii" /><br />
+CIRCUIT BREAKER 10A (MCB): <input type="text" id="jj" /><br />
+CIRCUIT BREAKER  10A (MCB) : <input type="text" id="kk" /><br />
+CIRCUIT BREAKER  10A (MCB) : <input type="text" id="ll" /><br />
+ TRIP SWITCH  40A / 30MA 2P (RCD) : <input type="text" id="mm" /><br />
+ TRIP SWITCH 40A / 100MA 2P(RCD): <input type="text" id="nn" /><br />
+ TRIP SWITCH 40A / 30MA 4P(RCCD) : <input type="text" id="oo" /><br />
+ TRIP SWITCH 40A / 100MA 4P(RCCD): <input type="text" id="pp" /><br />
+ TRIP SWITCH 63A / 30MA 4P(RCCD : <input type="text" id="qq" /><br />
+ TRIP SWITCH 63A / 100MA 4P(RCCD) : <input type="text" id="rr" /><br />
+ MAIN SWITCH 40A 2P (ISOLATOR) : <input type="text" id="ss" /><br />
+ MAIN SWITCH 40A 4P (ISOLATOR) : <input type="text" id="tt" /><br />
+ MAIN SWITCH 63A 4P (ISOLATOR) : <input type="text" id="uu" /><br />
+ MAIN SWITCH 100A 4P (ISOLATOR) : <input type="text" id="vv" /><br />
+ CHANGEOVER MCB TYPE 40A /2P,4P 63A/4P : <input type="text" id="ww" /><br />
+ Colour Cap Broun 16mm: <input type="text" id="xx" /><br />
+ Colour Cap Broun 10mm: : <input type="text" id="yy" /><br />
+ Colour Cap Broun 4mm: : <input type="text" id="zz" /><br />
+Colour Cap Black 16mm: <input type="text" id="aaa" /> <br />
+   Colour Cap Black 10mm: <input type="text" id="bbb" /><br />
+    Colour Cap Black 4mm: <input type="text" id="ccc" /><br />
+     Colour Cap Gray 16mm : <input type="text" id="ddd" /><br />
+	  Colour Cap Gray 10mm : <input type="text" id="eee" /><br />
+	  Colour Cap Gray 4mm : <input type="text" id="fff" /><br />
+	   INDICATOR LIGHT RED mcb/panel : <input type="text" id="ggg" /><br />
+	   INDICATOR LIGHT YELLOW mcb/panel: <input type="text" id="hhh" /><br />
+	   INDICATOR LIGHT BLUE mcb/panel : <input type="text" id="iii" /><br />
+	  BELL FOR MCB : <input type="text" id="jjj" /><br />
+	   Impulse relay : <input type="text" id="kkk" /><br />
+	  Modular contactor 2p : <input type="text" id="lll" /><br />
+	  3p contactor 230v/415v: <input type="text" id="mmm" /><br />
+	  BUSBAR Tooth: <input type="text" id="nnn" /><br />
+	   MCB Distribution Box 8 Way: <input type="text" id="ooo" /><br />
+	   MCB Distribution Box 10 Way : <input type="text" id="ppp" /><br />
+	   MCB Distribution Box 12 Way: <input type="text" id="qqq" /><br />
+	   MCB Distribution Box 18 Way: <input type="text" id="rrr" /><br />
+	   MCB Distribution Box 24 Way : <input type="text" id="sss" /><br />
+	   MCB Distribution steel box 8 Way : <input type="text" id="ttt" /><br />
+	  MCB Distribution steel box 12 Way : <input type="text" id="uuu" /><br />
+	  MCB Distribution steel box 16 Way : <input type="text" id="vvv" /><br />
+	  MCB Distribution steel box 24 Way : <input type="text" id="www" /><br />
+	   MCB Distribution steel box 3 ROW 42 Way/54 Way : <input type="text" id="xxx" /><br />
+	  MCB Distribution steel box 4 ROW 42 Way/56 Way : <input type="text" id="yyy" /><br />
+	  CEILING ROSE : <input type="text" id="zzz" /><br />
+ LAMP HOLDER : <input type="text" id="ab" /> <br />
+      SUN BOX (UNIVERSAL BOX) POLYCROME: <input type="text" id="bzb" /><br />
+      4 WAY  JUNCTION BOX POLYCROME: <input type="text" id="cb" /><br />
+      Wall  plug 6: <input type="text" id="db" /><br />
+	   Wall  plug 7 : <input type="text" id="eb" /><br />
+	   Wall  plug 8 : <input type="text" id="fb" /><br />
+	  Black Flat Head Screws 7 : <input type="text" id="gb" /><br />
+	  Black Flat Head Screws 8 : <input type="text" id="hb" /><br />
+	   Sleeve Anchor bolt Metal 8 : <input type="text" id="ib" /><br />
+	   Sleeve Anchor bolt Metal 10 : <input type="text" id="jb" /><br />
+	  Sleeve Anchor bolt hook 8: <input type="text" id="kb" /><br />
+	  Sleeve Anchor bolt hook 10: <input type="text" id="lb" /><br />
+	   Metal  nails  : <input type="text" id="mb" /><br />
+	   Conduit Pipe 4/3inch Pipe : <input type="text" id="nb" /><br />
+	   Conduit Pipe 4/3inch Bend: <input type="text" id="ob" /><br />
+	   Conduit Pipe 4/3inch T: <input type="text" id="pb" /><br />
+	   Conduit Pipe 4/3inch Shoket: <input type="text" id="qb" /><br />
+	   Conduit Pipe 1inch  Pipe: <input type="text" id="rb" /><br />
+	   Conduit Pipe 1inch Bend: <input type="text" id="sb" /><br />
+	   Conduit Pipe 1inch T: <input type="text" id="tb" /><br />
+	   Conduit Pipe 1inch Shoket: <input type="text" id="ub" /><br />
+	  Conduit Pipe 2/inch Pipe: <input type="text" id="vb" /><br />
+	  Conduit Pipe 2/inch Bend: <input type="text" id="wb" /><br />
+	  Conduit Pipe 2/inch T: <input type="text" id="xb" /><br />
+	  PVC Pipe 2/inch Pipe : <input type="text" id="yb" /><br />
+	  PVC Pipe 2/inch Bend : <input type="text" id="zb" /><br />
+ PVC Pipe 2/inch T: <input type="text" id="abb" /><br />
+   PVC Pipe 2/inch L: <input type="text" id="bbb" /><br />
+ PVC Pipe 2/inch Shoket : <input type="text" id="cbb" /><br />
+    Conduit casing  POLYCROME 1 inch: <input type="text" id="dbb" /><br />
+   Conduit casing  POLYCROME 2x1 inch: <input type="text" id="ebb" /><br />
+  Conduit Clip 2/1: <input type="text" id="fbb" /><br />
+ Conduit Clip 4/3: <input type="text" id="gbb" /><br />
+  Conduit Clip 1 : <input type="text" id="hbb" /><br />
+ GI Clip 2/1 : <input type="text" id="ibb" /><br />
+  GI Clip 4/3: <input type="text" id="jbb" /><br />
+  GI Clip 1: <input type="text" id="kbb" /><br />
+   insulation tape Kelani : <input type="text" id="lbb" /><br />
+   Pendant Lamp  : <input type="text" id="mbb" /><br />
+  LED bulb 5w  warm / white: <input type="text" id="nbb" /><br />
+   LED bulb 7w: <input type="text" id="obb" /><br />
+   LED bulb 9w: <input type="text" id="pbb" /><br />
+  LED bulb 12w: <input type="text" id="qbb" /><br />
+   LED panel light 6w: <input type="text" id="rbb" /><br />
+   LED panel light  12w: <input type="text" id="sbb" /><br />
+  Wall Lamp living: <input type="text" id="tbb" /><br />
+   Wall Lamp dining: <input type="text" id="ubb" /><br />
+ Wall Lamp room : <input type="text" id="vbb" /><br />
+  Wall Lamp veranda : <input type="text" id="wbb" /><br />
+   Outdoor down lights: <input type="text" id="xbb" /><br />
+  Outdoor up and down lights: <input type="text" id="ybb" /><br />
+  Sport Light : <input type="text" id="zbb" /><br />
+  Fasher Light 10w: <input type="text" id="aabb" /><br />
+   Fasher Light 20w : <input type="text" id="bbbb" /><br />
+  Fasher Light 50w : <input type="text" id="ccbb" /><br />
+    Track light: <input type="text" id="ddbb" /><br />
+    Track Bar: <input type="text" id="eebb" /><br />
+  Celing Fan: <input type="text" id="ffbb" /><br />
+Wall Fan : <input type="text" id="ggbb" /><br />
+ 
+	   
+     </fieldset>
+    </div>
+   </div>
+
+   <div class="container1">
+    <fieldset>
+     <legend>Welcome</legend>
+     <h3>My Name:<span id="name2"></span></h3>
+     <h3>Email: <span id="email2"></span></h3>
+     <h3>Mobile: <span id="mobile2"></span></h3>
+	  <h3>brands: <span id="namename3"></span></h3>
+	 <h3>Site Name: <span id="namename2"></span></h3>
+     <table border="1">
+      <thead>
+       <tr>
+        
+        <th>Details </th>
+        <th>Quantity</th>
+         </tr>
+      </thead>
+      <tbody id="bill">
+      </tbody>
+     </table>
+    </fieldset>
+	<legend>Thanks</legend>
+    <h2>EzviNet Technologhy</span></h2>
+   </div>
+   <button style = "background-color: gray ; width;100px; height:30px;" class="download">Download PDF</button> 
+    <!-- Adding a script to listen for the button click event and to convert the HTML element to a PDF and download it -->
+    
+  </div>
+  <script>
+   var Smosa = 0,
+    Kachori = 0,
+    Vadapav = 0,
+	 d = 0,
+ e = 0,
+ f = 0,
+ g = 0,
+ h = 0,
+ i = 0,
+ j = 0,
+ k = 0,
+ l = 0,
+ m = 0,
+ n = 0,
+ o = 0,
+ p = 0,
+ q = 0,
+ r = 0,
+ s = 0,
+ t = 0,
+ u = 0,
+ v = 0,
+ w = 0,
+x = 0,
+y = 0,
+z = 0,
+aa = 0,
+bb = 0,
+cc = 0,
+extra = 0,
+ dd = 0,
+ ee = 0,
+ ff = 0,
+ gg = 0,
+ hh = 0,
+ ii = 0,
+ jj = 0,
+ kk = 0,
+ ll = 0,
+ mm = 0,
+ nn = 0,
+ oo = 0,
+ pp = 0,
+ qq = 0,
+ rr = 0,
+ ss = 0,
+ tt = 0,
+ uu = 0,
+ vv = 0,
+ ww = 0,
+xx = 0,
+yy = 0,
+zz = 0,
+aaa = 0,
+bbb = 0,
+ccc = 0,
+ ddd = 0,
+ eee = 0,
+ fff = 0,
+ ggg = 0,
+ hhh = 0,
+ iii = 0,
+ jjj = 0,
+ kkk = 0,
+ lll = 0,
+ mmm = 0,
+ nnn = 0,
+ ooo = 0,
+ ppp = 0,
+ qqq = 0,
+ rrr = 0,
+ sss = 0,
+ ttt = 0,
+ uuu = 0,
+ vvv = 0,
+ www = 0,
+xxx = 0,
+yyy = 0,
+zzz = 0,
+ab = 0,
+bzb = 0,
+cb = 0,
+ db = 0,
+ eb = 0,
+ fb = 0,
+ gb = 0,
+ hb = 0,
+ ib = 0,
+ jb = 0,
+ kb = 0,
+ lb = 0,
+ mb = 0,
+ nb = 0,
+ ob = 0,
+ pb = 0,
+ qb = 0,
+ rb = 0,
+ sb = 0,
+ tb = 0,
+ ub = 0,
+ vb = 0,
+ wb = 0,
+xb = 0,
+yb = 0,
+zb = 0,
+abb = 0,
+bbb = 0,
+cbb = 0,
+ dbb = 0,
+ ebb = 0,
+ fbb = 0,
+ gbb = 0,
+ hbb = 0,
+ ibb = 0,
+ jbb = 0,
+ kbb = 0,
+ lbb = 0,
+ mbb = 0,
+ nbb = 0,
+ obb = 0,
+ pbb = 0,
+ qbb = 0,
+ rbb = 0,
+ sbb = 0,
+ tbb = 0,
+ ubb = 0,
+ vbb = 0,
+ wbb = 0,
+xbb = 0,
+ybb = 0,
+zbb = 0,
+aabb = 0,
+bbbb = 0,
+ccbb = 0,
+ ddbb = 0,
+ eebb = 0,
+ ffbb = 0,
+ ggbb = 0;
+
+    
+  var smosa_q = 0,
+    kachori_q = 0,
+    vadapav_q = 0,
+   d_q = 0,
+ e_q = 0,
+ f_q = 0,
+ g_q = 0,
+ h_q = 0,
+ i_q = 0,
+ j_q = 0,
+ k_q = 0,
+ l_q = 0,
+ m_q = 0,
+ n_q = 0,
+ o_q = 0,
+ p_q = 0,
+ q_q = 0,
+ r_q = 0,
+ s_q = 0,
+ t_q = 0,
+ u_q = 0,
+ v_q = 0,
+ w_q = 0,
+x_q = 0,
+y_q = 0,
+z_q = 0,
+aa_q = 0,
+bb_q = 0,
+cc_q = 0,
+extra_q = 0,
+ dd_q = 0,
+ ee_q = 0,
+ ff_q = 0,
+ gg_q = 0,
+ hh_q = 0,
+ ii_q = 0,
+ jj_q = 0,
+ kk_q = 0,
+ ll_q = 0,
+ mm_q = 0,
+ nn_q = 0,
+ oo_q = 0,
+ pp_q = 0,
+ qq_q = 0,
+ rr_q = 0,
+ ss_q = 0,
+ tt_q = 0,
+ uu_q = 0,
+ vv_q = 0,
+ ww_q = 0,
+xx_q = 0,
+yy_q = 0,
+zz_q = 0,
+aaa_q = 0,
+bbb_q = 0,
+ccc_q = 0,
+ ddd_q = 0,
+ eee_q = 0,
+ fff_q = 0,
+ ggg_q = 0,
+ hhh_q = 0,
+ iii_q = 0,
+ jjj_q = 0,
+ kkk_q = 0,
+ lll_q = 0,
+ mmm_q = 0,
+ nnn_q = 0,
+ ooo_q = 0,
+ ppp_q = 0,
+ qqq_q = 0,
+ rrr_q = 0,
+ sss_q = 0,
+ ttt_q = 0,
+ uuu_q = 0,
+ vvv_q = 0,
+ www_q = 0,
+xxx_q = 0,
+yyy_q = 0,
+zzz_q = 0,
+ab_q = 0,
+bzb_q = 0,
+cb_q = 0,
+ db_q = 0,
+ eb_q = 0,
+ fb_q = 0,
+ gb_q = 0,
+ hb_q = 0,
+ ib_q = 0,
+ jb_q = 0,
+ kb_q = 0,
+ lb_q = 0,
+ mb_q = 0,
+ nb_q = 0,
+ ob_q = 0,
+ pb_q = 0,
+ qb_q = 0,
+ rb_q = 0,
+ sb_q = 0,
+ tb_q = 0,
+ ub_q = 0,
+ vb_q = 0,
+ wb_q = 0,
+xb_q = 0,
+yb_q = 0,
+zb_q = 0,
+abb_q = 0,
+bbb_q = 0,
+cbb_q = 0,
+ dbb_q = 0,
+ ebb_q = 0,
+ fbb_q = 0,
+ gbb_q = 0,
+ hbb_q = 0,
+ ibb_q = 0,
+ jbb_q = 0,
+ kbb_q = 0,
+ lbb_q = 0,
+ mbb_q = 0,
+ nbb_q = 0,
+ obb_q = 0,
+ pbb_q = 0,
+ qbb_q = 0,
+ rbb_q = 0,
+ sbb_q = 0,
+ tbb_q = 0,
+ ubb_q = 0,
+ vbb_q = 0,
+ wbb_q = 0,
+xbb_q = 0,
+ybb_q = 0,
+zbb_q = 0,
+aabb_q = 0,
+bbbb_q = 0,
+ccbb_q = 0,
+ ddbb_q = 0,
+ eebb_q = 0,
+ ffbb_q = 0,
+ ggbb_q = 0;
+   var name = "",
+    email = "";
+   var smosaBill = "",
+    kachoriBill = "",
+    vadapavBill = "",
+    dBill = "",
+	eBill = "",
+	fBill = "",
+ gBill = "",
+ hBill = "",
+ iBill = "",
+ jBill = "",
+ kBill = "",
+ lBill = "",
+ mBill = "",
+  nBill = "",
+ oBill = "",
+ pBill = "",
+ qBill = "",
+ rBill = "",
+ sBill = "",
+ tBill = "",
+ uBill = "",
+ vBill = "",
+ wBill = "",
+xBill = "",
+yBill = "",
+zBill = "",
+aaBill = "",
+bbBill = "",
+ccBill = "",
+extraBill = "",
+ ddBill = "",
+ eeBill = "",
+ ffBill = "",
+ ggBill = "",
+ hhBill = "",
+ iiBill = "",
+ jjBill = "",
+ kkBill = "",
+ llBill = "",
+ mmBill = "",
+ nnBill = "",
+ ooBill = "",
+ ppBill = "",
+ qqBill = "",
+ rrBill = "",
+ ssBill = "",
+ ttBill = "",
+ uuBill = "",
+ vvBill = "",
+ wwBill = "",
+xxBill = "",
+yyBill = "",
+zzBill = "",
+aaaBill = "",
+bbbBill = "",
+cccBill = "",
+ dddBill = "",
+ eeeBill = "",
+ fffBill = "",
+ gggBill = "",
+ hhhBill = "",
+ iiiBill = "",
+ jjjBill = "",
+ kkkBill = "",
+ lllBill = "",
+ mmmBill = "",
+ nnnBill = "",
+ oooBill = "",
+ pppBill = "",
+ qqqBill = "",
+ rrrBill = "",
+ sssBill = "",
+ tttBill = "",
+ uuuBill = "",
+ vvvBill = "",
+ wwwBill = "",
+xxxBill = "",
+yyyBill = "",
+zzzBill = "",
+abBill = "",
+bzbBill = "",
+cbBill = "",
+ dbBill = "",
+ ebBill = "",
+ fbBill = "",
+ gbBill = "",
+ hbBill = "",
+ ibBill = "",
+ jbBill = "",
+ kbBill = "",
+ lbBill = "",
+ mbBill = "",
+ nbBill = "",
+ obBill = "",
+ pbBill = "",
+ qbBill = "",
+ rbBill = "",
+ sbBill = "",
+ tbBill = "",
+ ubBill = "",
+ vbBill = "",
+ wbBill = "",
+xbBill = "",
+ybBill = "",
+zbBill = "",
+abbBill = "",
+bbbBill = "",
+cbbBill = "",
+ dbbBill = "",
+ ebbBill = "",
+ fbbBill = "",
+ gbbBill = "",
+ hbbBill = "",
+ ibbBill = "",
+ jbbBill = "",
+ kbbBill = "",
+ lbbBill = "",
+ mbbBill = "",
+ nbbBill = "",
+ obbBill = "",
+ pbbBill = "",
+ qbbBill = "",
+ rbbBill = "",
+ sbbBill = "",
+ tbbBill = "",
+ ubbBill = "",
+ vbbBill = "",
+ wbbBill = "",
+xbbBill = "",
+ybbBill = "",
+zbbBill = "",
+aabbBill = "",
+bbbbBill = "",
+ccbbBill = "",
+ ddbbBill = "",
+ eebbBill = "",
+ ffbbBill = "",
+ ggbbBill = "";
+
+   var total_amount = 0;
+   document.getElementById("name").addEventListener("keyup", function () {
+    document.getElementById("name2").innerHTML = this.value;
+   });
+
+   document.getElementById("email").addEventListener("keyup", function () {
+    document.getElementById("email2").innerHTML = this.value;
+   });
+
+   document.getElementById("mobile").addEventListener("keyup", function () {
+    document.getElementById("mobile2").innerHTML = this.value;
+   });
+   
+   document.getElementById("namename").addEventListener("keyup", function () {
+    document.getElementById("namename2").innerHTML = this.value;
+   });
+   
+   document.getElementById("namenamename").addEventListener("keyup", function () {
+    document.getElementById("namename3").innerHTML = this.value;
+   });
+
+   document.getElementById("smosa").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     smosaBill = "";
+     smosa_q = 0;
+     showBill();
+    } else {
+     smosa_q = this.value;
+     smosaBill = "<tr><td>(8A)  Cu/PVC  1/1.13mm (1mm2) Wire -Brown</td><td>" + smosa_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("kachori").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kachoriBill = "";
+     kachori_q = 0;
+     showBill();
+    } else {
+     kachori_q = this.value;
+     kachoriBill = "<tr><td>(8A)  Cu/PVC 1/1.13mm (1mm2) Wire -Blue</td><td>" + kachori_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("vadapav").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vadapavBill = "";
+     vadapav_q = 0;
+     showBill();
+    } else {
+     vadapav_q = this.value;
+     vadapavBill = "<tr><td>(15A) Cu/PVC 7/0.53mm (1.5mm2) Wire -Flat Twin</td><td>" + vadapav_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("d").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     dBill = "";
+     d_q = 0;
+     showBill();
+    } else {
+     d_q = this.value;
+     dBill = "<tr><td>(20A) Cu/PVC 7/0.67mm (2.5mm2) Wire -Flat Twin</td><td>" + d_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("e").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eBill = "";
+     e_q = 0;
+     showBill();
+    } else {
+     e_q = this.value;
+     eBill = "<tr><td>(20A) Cu/PVC 7/0.67mm (2.5mm2) Wire -Earth</td><td>" + e_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("f").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fBill = "";
+     f_q = 0;
+     showBill();
+    } else {
+     f_q = this.value;
+     fBill = "<tr><td>(30A) Cu/PVC 7/0.85mm (4mm2) Wire -Flat Twin</td><td>" + f_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("g").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gBill = "";
+     g_q = 0;
+     showBill();
+    } else {
+     g_q = this.value;
+     gBill = "<tr><td>(39A) Cu/PVC 7/1.04mm (6mm2) Wire -Flat Twin</td><td>" + g_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("h").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hBill = "";
+     h_q = 0;
+     showBill();
+    } else {
+     h_q = this.value;
+     hBill = "<tr><td>(54A) Cu/PVC 7/1.35mm (10mm2) Wire -Brown</td><td>" + h_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("i").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     iBill = "";
+     i_q = 0;
+     showBill();
+    } else {
+     i_q = this.value;
+     iBill = "<tr><td>(54A) Cu/PVC 7/1.35mm (10mm2) Wire -Blue</td><td>" + i_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("j").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jBill = "";
+     j_q = 0;
+     showBill();
+    } else {
+     j_q = this.value;
+     jBill = "<tr><td>(70A) Cu/PVC 7/1.70mm (16mm2) Wire -Brown</td><td>" + j_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("k").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kBill = "";
+     k_q = 0;
+     showBill();
+    } else {
+     k_q = this.value;
+     kBill = "<tr><td>(70A) Cu/PVC 7/1.70mm (16mm2) Wire -Blue</td><td>" + k_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("l").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     lBill = "";
+     l_q = 0;
+     showBill();
+    } else {
+     l_q = this.value;
+     lBill = "<tr><td>Cu/PVC 16/0.20mm /  2 Core Cable</td><td>" + l_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("m").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mBill = "";
+     m_q = 0;
+     showBill();
+    } else {
+     m_q = this.value;
+     mBill = "<tr><td>Cu/PVC 16/0.20mm / 3 Core Cable</td><td>" + m_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("n").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nBill = "";
+     n_q = 0;
+     showBill();
+    } else {
+     n_q = this.value;
+     nBill = "<tr><td>Cu/PVC 0.5 mm  singel  Cable</td><td>" + n_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("o").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     oBill = "";
+     o_q = 0;
+     showBill();
+    } else {
+     o_q = this.value;
+     oBill = "<tr><td>4mm Switch gear cable</td><td>" + o_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("p").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     pBill = "";
+     p_q = 0;
+     showBill();
+    } else {
+     p_q = this.value;
+     pBill = "<tr><td>10mm Switch gear cable</td><td>" + p_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("q").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qBill = "";
+     q_q = 0;
+     showBill();
+    } else {
+     q_q = this.value;
+     qBill = "<tr><td>1 Gang 1Way Switches</td><td>" + q_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("r").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rBill = "";
+     r_q = 0;
+     showBill();
+    } else {
+     r_q = this.value;
+     rBill = "<tr><td>2 Gang 1Way Switches</td><td>" + r_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("s").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     sBill = "";
+     s_q = 0;
+     showBill();
+    } else {
+     s_q = this.value;
+     sBill = "<tr><td>3 Gang 1Way Switches</td><td>" + s_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("t").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     tBill = "";
+     t_q = 0;
+     showBill();
+    } else {
+     t_q = this.value;
+     tBill = "<tr><td>4 Gang 1Way Switches</td><td>" + t_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("u").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     uBill = "";
+     u_q = 0;
+     showBill();
+    } else {
+     u_q = this.value;
+     uBill = "<tr><td>5 Gang 1Way Switches</td><td>" + u_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("v").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vBill = "";
+     v_q = 0;
+     showBill();
+    } else {
+     v_q = this.value;
+     vBill = "<tr><td>1 Gang 2Way Switches</td><td>" + v_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("w").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wBill = "";
+     w_q = 0;
+     showBill();
+    } else {
+     w_q = this.value;
+     wBill = "<tr><td>2 Gang 2Way Switches</td><td>" + w_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("x").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xBill = "";
+     x_q = 0;
+     showBill();
+    } else {
+     x_q = this.value;
+     xBill = "<tr><td>3 Gang 2Way Switches</td><td>" + x_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("y").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     yBill = "";
+     y_q = 0;
+     showBill();
+    } else {
+     y_q = this.value;
+     yBill = "<tr><td>4 Gang 2Way Switches</td><td>" + y_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("z").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zBill = "";
+     z_q = 0;
+     showBill();
+    } else {
+     z_q = this.value;
+     zBill = "<tr><td>5 Gang 2Way Switches</td><td>" + z_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("aa").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     aaBill = "";
+     aa_q = 0;
+     showBill();
+    } else {
+     aa_q = this.value;
+     aaBill = "<tr><td>DOUBLE POLE SWITCH</td><td>" + aa_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bbBill = "";
+     bb_q = 0;
+     showBill();
+    } else {
+     bb_q = this.value;
+     bbBill = "<tr><td>BELL PRESS</td><td>" + bb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("cc").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ccBill = "";
+     cc_q = 0;
+     showBill();
+    } else {
+     cc_q = this.value;
+     ccBill = "<tr><td>LIGHT DIMMER</td><td>" + cc_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extra ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extraBill = "";
+     extra_q = 0;
+     showBill();
+    } else {
+     extra_q = this.value;
+     extraBill = "<tr><td>...</td><td>" + extra_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("dd").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ddBill = "";
+     dd_q = 0;
+     showBill();
+    } else {
+     dd_q = this.value;
+     ddBill = "<tr><td>FAN SPEED CONTROLLER</td><td>" + dd_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ee").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eeBill = "";
+     ee_q = 0;
+     showBill();
+    } else {
+     ee_q = this.value;
+     eeBill = "<tr><td>5 STEP  FAN SPEED CONTROLLER</td><td>" + ee_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ff").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ffBill = "";
+     ff_q = 0;
+     showBill();
+    } else {
+     ff_q = this.value;
+     ffBill = "<tr><td>SOCKET OUTLET 13A</td><td>" + ff_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("gg").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ggBill = "";
+     gg_q = 0;
+     showBill();
+    } else {
+     gg_q = this.value;
+     ggBill = "<tr><td>WATER FLOAT SWITCHES</td><td>" + gg_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("hh").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hhBill = "";
+     hh_q = 0;
+     showBill();
+    } else {
+     hh_q = this.value;
+     hhBill = "<tr><td>Key Card / Tag Switch</td><td>" + hh_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ii").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     iiBill = "";
+     ii_q = 0;
+     showBill();
+    } else {
+     ii_q = this.value;
+     iiBill = "<tr><td>CIRCUIT BREAKER  10A (MCB)</td><td>" + ii_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("jj").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jjBill = "";
+     jj_q = 0;
+     showBill();
+    } else {
+     jj_q = this.value;
+     jjBill = "<tr><td>CIRCUIT BREAKER 10A (MCB)</td><td>" + jj_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("kk").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kkBill = "";
+     kk_q = 0;
+     showBill();
+    } else {
+     kk_q = this.value;
+     kkBill = "<tr><td>CIRCUIT BREAKER 10A (MCB)</td><td>" + kk_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ll").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     llBill = "";
+     ll_q = 0;
+     showBill();
+    } else {
+     ll_q = this.value;
+     llBill = "<tr><td>CIRCUIT BREAKER 10A (MCB)</td><td>" + ll_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("mm").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mmBill = "";
+     mm_q = 0;
+     showBill();
+    } else {
+     mm_q = this.value;
+     mmBill = "<tr><td>TRIP SWITCH  40A / 30MA 2P (RCD)</td><td>" + mm_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("nn").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nnBill = "";
+     nn_q = 0;
+     showBill();
+    } else {
+     nn_q = this.value;
+     nnBill = "<tr><td>TRIP SWITCH 40A / 100MA 2P(RCD)</td><td>" + nn_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("oo").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ooBill = "";
+     oo_q = 0;
+     showBill();
+    } else {
+     oo_q = this.value;
+     ooBill = "<tr><td>TRIP SWITCH 40A / 30MA 4P(RCCD)</td><td>" + oo_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("pp").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ppBill = "";
+     pp_q = 0;
+     showBill();
+    } else {
+     pp_q = this.value;
+     ppBill = "<tr><td>TRIP SWITCH 40A / 100MA 4P(RCCD)</td><td>" + pp_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("qq").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qqBill = "";
+     qq_q = 0;
+     showBill();
+    } else {
+     qq_q = this.value;
+     qqBill = "<tr><td>TRIP SWITCH 63A / 30MA 4P(RCCD)</td><td>" + qq_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("rr").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rrBill = "";
+     rr_q = 0;
+     showBill();
+    } else {
+     rr_q = this.value;
+     rrBill = "<tr><td>TRIP SWITCH 63A / 100MA 4P(RCCD)</td><td>" + rr_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ss").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ssBill = "";
+     ss_q = 0;
+     showBill();
+    } else {
+     ss_q = this.value;
+     ssBill = "<tr><td>MAIN SWITCH 40A 2P (ISOLATOR)</td><td>" + ss_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("tt").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ttBill = "";
+     tt_q = 0;
+     showBill();
+    } else {
+     tt_q = this.value;
+     ttBill = "<tr><td> MAIN SWITCH 40A 4P (ISOLATOR)</td><td>" + tt_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("uu").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     uuBill = "";
+     uu_q = 0;
+     showBill();
+    } else {
+     uu_q = this.value;
+     uuBill = "<tr><td>MAIN SWITCH 63A 4P (ISOLATOR)</td><td>" + uu_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("vv").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vvBill = "";
+     vv_q = 0;
+     showBill();
+    } else {
+     vv_q = this.value;
+     vvBill = "<tr><td> MAIN SWITCH 100A 4P (ISOLATOR)</td><td>" + vv_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ww").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wwBill = "";
+     ww_q = 0;
+     showBill();
+    } else {
+     ww_q = this.value;
+     wwBill = "<tr><td>CHANGEOVER MCB TYPE 40A /2P,4P 63A/4P</td><td>" + ww_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("xx").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xxBill = "";
+     xx_q = 0;
+     showBill();
+    } else {
+     xx_q = this.value;
+     xxBill = "<tr><td>Colour Cap Broun 16mm</td><td>" + xx_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("yy").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     yyBill = "";
+     yy_q = 0;
+     showBill();
+    } else {
+     yy_q = this.value;
+     yyBill = "<tr><td>Colour Cap Broun 10mm</td><td>" + yy_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("zz").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zzBill = "";
+     zz_q = 0;
+     showBill();
+    } else {
+     zz_q = this.value;
+     zzBill = "<tr><td>Colour Cap Broun 4mm</td><td>" + zz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("aaa").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     aaaBill = "";
+     aaa_q = 0;
+     showBill();
+    } else {
+     aaa_q = this.value;
+     aaaBill = "<tr><td>Colour Cap Black 16mm</td><td>" + aaa_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bbbBill = "";
+     bbb_q = 0;
+     showBill();
+    } else {
+     bbb_q = this.value;
+     bbbBill = "<tr><td>Colour Cap Black 10mm</td><td>" + bbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ccc").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     cccBill = "";
+     ccc_q = 0;
+     showBill();
+    } else {
+     ccc_q = this.value;
+     cccBill = "<tr><td>Colour Cap Black 4mm</td><td>" + ccc_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ddd").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     dddBill = "";
+     ddd_q = 0;
+     showBill();
+    } else {
+     ddd_q = this.value;
+     dddBill = "<tr><td>Colour Cap Gray 16mm</td><td>" + ddd_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("eee").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eeeBill = "";
+     eee_q = 0;
+     showBill();
+    } else {
+     eee_q = this.value;
+     eeeBill = "<tr><td>Colour Cap Gray 10mm</td><td>" + eee_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("fff").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fffBill = "";
+     fff_q = 0;
+     showBill();
+    } else {
+     fff_q = this.value;
+     fffBill = "<tr><td>Colour Cap Gray 4mm</td><td>" + fff_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ggg").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gggBill = "";
+     ggg_q = 0;
+     showBill();
+    } else {
+     ggg_q = this.value;
+     gggBill = "<tr><td>INDICATOR LIGHT RED mcb/panel</td><td>" + ggg_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("hhh").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hhhBill = "";
+     hhh_q = 0;
+     showBill();
+    } else {
+     hhh_q = this.value;
+     hhhBill = "<tr><td>INDICATOR LIGHT YELLOW mcb/panel</td><td>" + hhh_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("iii").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     iiiBill = "";
+     iii_q = 0;
+     showBill();
+    } else {
+     iii_q = this.value;
+     iiiBill = "<tr><td>INDICATOR LIGHT BLUE mcb/panel</td><td>" + iii_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("jjj").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jjjBill = "";
+     jjj_q = 0;
+     showBill();
+    } else {
+     jjj_q = this.value;
+     jjjBill = "<tr><td>BELL FOR MCB</td><td>" + jjj_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("kkk").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kkkBill = "";
+     kkk_q = 0;
+     showBill();
+    } else {
+     kkk_q = this.value;
+     kkkBill = "<tr><td>Impulse relay</td><td>" + kkk_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("lll").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     lllBill = "";
+     lll_q = 0;
+     showBill();
+    } else {
+     lll_q = this.value;
+     lllBill = "<tr><td>Modular contactor 2p</td><td>" + lll_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("mmm").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mmmBill = "";
+     mmm_q = 0;
+     showBill();
+    } else {
+     mmm_q = this.value;
+     mmmBill = "<tr><td>3p contactor 230v/415v</td><td>" + mmm_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("nnn").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nnnBill = "";
+     nnn_q = 0;
+     showBill();
+    } else {
+     nnn_q = this.value;
+     nnnBill = "<tr><td>BUSBAR Tooth</td><td>" + nnn_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ooo").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     oooBill = "";
+     ooo_q = 0;
+     showBill();
+    } else {
+     ooo_q = this.value;
+     oooBill = "<tr><td>MCB Distribution Box 8 Way</td><td>" + ooo_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ppp").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     pppBill = "";
+     ppp_q = 0;
+     showBill();
+    } else {
+     ppp_q = this.value;
+     pppBill = "<tr><td>MCB Distribution Box 10 Way</td><td>" + ppp_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("qqq").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qqqBill = "";
+     qqq_q = 0;
+     showBill();
+    } else {
+     qqq_q = this.value;
+     qqqBill = "<tr><td>MCB Distribution Box 12 Way</td><td>" + qqq_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("rrr").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rrrBill = "";
+     rrr_q = 0;
+     showBill();
+    } else {
+     rrr_q = this.value;
+     rrrBill = "<tr><td>MCB Distribution Box 18 Way</td><td>" + rrr_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("sss").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     sssBill = "";
+     sss_q = 0;
+     showBill();
+    } else {
+     sss_q = this.value;
+     sssBill = "<tr><td>MCB Distribution Box 24 Way</td><td>" + sss_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ttt").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     tttBill = "";
+     ttt_q = 0;
+     showBill();
+    } else {
+     ttt_q = this.value;
+     ttBill = "<tr><td>MCB Distribution steel box 8 Way</td><td>" + ttt_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("uuu").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     uuuBill = "";
+     uuu_q = 0;
+     showBill();
+    } else {
+     uuu_q = this.value;
+     uuuBill = "<tr><td>MCB Distribution steel box 12 Way</td><td>" + uuu_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("vvv").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vvvBill = "";
+     vvv_q = 0;
+     showBill();
+    } else {
+     vvv_q = this.value;
+     vvvBill = "<tr><td>MCB Distribution steel box 16 Way</td><td>" + vvv_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("www").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wwwBill = "";
+     www_q = 0;
+     showBill();
+    } else {
+     www_q = this.value;
+     wwwBill = "<tr><td>MCB Distribution steel box 24 Way </td><td>" + www_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("xxx").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xxxBill = "";
+     xxx_q = 0;
+     showBill();
+    } else {
+     xxx_q = this.value;
+     xxxBill = "<tr><td>MCB Distribution steel box 3 ROW 42 Way/54 Way</td><td>" + xxx_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("yyy").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     yyyBill = "";
+     yyy_q = 0;
+     showBill();
+    } else {
+     yyy_q = this.value;
+     yyyBill = "<tr><td>MCB Distribution steel box 4 ROW 42 Way/56 Way</td><td>" + yyy_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("zzz").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zzzBill = "";
+     zzz_q = 0;
+     showBill();
+    } else {
+     zzz_q = this.value;
+     zzzBill = "<tr><td>CEILING ROSE</td><td>" + zzz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ab").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     abBill = "";
+     ab_q = 0;
+     showBill();
+    } else {
+     ab_q = this.value;
+     abBill = "<tr><td>LAMP HOLDER </td><td>" + ab_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bzb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bzbBill = "";
+     bzb_q = 0;
+     showBill();
+    } else {
+     bzb_q = this.value;
+     bzbBill = "<tr><td>SUN BOX (UNIVERSAL BOX) POLYCROME</td><td>" + bzb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("cb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     cbBill = "";
+     cb_q = 0;
+     showBill();
+    } else {
+     cb_q = this.value;
+     cbBill = "<tr><td>4 WAY  JUNCTION BOX POLYCROME</td><td>" + cb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("db").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     dbBill = "";
+     db_q = 0;
+     showBill();
+    } else {
+     db_q = this.value;
+     dbBill = "<tr><td>Wall  plug 6</td><td>" + db_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("eb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ebBill = "";
+     eb_q = 0;
+     showBill();
+    } else {
+     eb_q = this.value;
+     ebBill = "<tr><td>Wall  plug 7 </td><td>" + eb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("fb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fbBill = "";
+     fb_q = 0;
+     showBill();
+    } else {
+     fb_q = this.value;
+     fbBill = "<tr><td>Wall  plug 8</td><td>" + fb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("gb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gbBill = "";
+     gb_q = 0;
+     showBill();
+    } else {
+     gb_q = this.value;
+     gbBill = "<tr><td>Black Flat Head Screws 7</td><td>" + gb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("hb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hbBill = "";
+     hb_q = 0;
+     showBill();
+    } else {
+     hb_q = this.value;
+     hbBill = "<tr><td>Black Flat Head Screws 8</td><td>" + hb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ib").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ibBill = "";
+     ib_q = 0;
+     showBill();
+    } else {
+     ib_q = this.value;
+     ibBill = "<tr><td>Sleeve Anchor bolt Metal 8</td><td>" + ib_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("jb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jbBill = "";
+     jb_q = 0;
+     showBill();
+    } else {
+     jb_q = this.value;
+     jbBill = "<tr><td>Sleeve Anchor bolt Metal 10 </td><td>" + jb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("kb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kbBill = "";
+     kb_q = 0;
+     showBill();
+    } else {
+     kb_q = this.value;
+     kbBill = "<tr><td>Sleeve Anchor bolt hook 8</td><td>" + kb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("lb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     lbBill = "";
+     lb_q = 0;
+     showBill();
+    } else {
+     lb_q = this.value;
+     lbBill = "<tr><td>Sleeve Anchor bolt hook 10</td><td>" + lb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("mb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mbBill = "";
+     mb_q = 0;
+     showBill();
+    } else {
+     mb_q = this.value;
+     mbBill = "<tr><td>Metal  nails</td><td>" + mb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("nb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nbBill = "";
+     nb_q = 0;
+     showBill();
+    } else {
+     nb_q = this.value;
+     nbBill = "<tr><td>Conduit Pipe 4/3inch Pipe</td><td>" + nb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ob").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     obBill = "";
+     ob_q = 0;
+     showBill();
+    } else {
+     ob_q = this.value;
+     obBill = "<tr><td>Conduit Pipe 4/3inch Bend</td><td>" + ob_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("pb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     pbBill = "";
+     pb_q = 0;
+     showBill();
+    } else {
+     pb_q = this.value;
+     pbBill = "<tr><td>Conduit Pipe 4/3inch T</td><td>" + pb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("qb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qbBill = "";
+     qb_q = 0;
+     showBill();
+    } else {
+     qb_q = this.value;
+     qbBill = "<tr><td>Conduit Pipe 4/3inch Shoket</td><td>" + qb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("rb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rbBill = "";
+     rb_q = 0;
+     showBill();
+    } else {
+     rb_q = this.value;
+     rbBill = "<tr><td>Conduit Pipe 1inch  Pipe</td><td>" + rb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("sb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     sbBill = "";
+     sb_q = 0;
+     showBill();
+    } else {
+     sb_q = this.value;
+     sbBill = "<tr><td>Conduit Pipe 1inch Bend</td><td>" + sb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("tb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     tbBill = "";
+     tb_q = 0;
+     showBill();
+    } else {
+     tb_q = this.value;
+     tbBill = "<tr><td>Conduit Pipe 1inch T</td><td>" + tb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ub").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ubBill = "";
+     ub_q = 0;
+     showBill();
+    } else {
+     ub_q = this.value;
+     ubBill = "<tr><td>Conduit Pipe 1inch Shoket</td><td>" + ub_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("vb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vbBill = "";
+     vb_q = 0;
+     showBill();
+    } else {
+     vb_q = this.value;
+     vbBill = "<tr><td>Conduit Pipe 2/inch Pipe</td><td>" + vb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("wb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wbBill = "";
+     wb_q = 0;
+     showBill();
+    } else {
+     wb_q = this.value;
+     wbBill = "<tr><td>Conduit Pipe 2/inch Bend</td><td>" + wb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("xb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xbBill = "";
+     xb_q = 0;
+     showBill();
+    } else {
+     xb_q = this.value;
+     xbBill = "<tr><td>Conduit Pipe 2/inch T</td><td>" + xb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("yb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ybBill = "";
+     yb_q = 0;
+     showBill();
+    } else {
+     yb_q = this.value;
+     ybBill = "<tr><td>PVC Pipe 2/inch Pipe</td><td>" + yb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("zb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zbBill = "";
+     zb_q = 0;
+     showBill();
+    } else {
+     zb_q = this.value;
+     zbBill = "<tr><td>PVC Pipe 2/inch Bend </td><td>" + zb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("abb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     abbBill = "";
+     abb_q = 0;
+     showBill();
+    } else {
+     abb_q = this.value;
+     abbBill = "<tr><td>PVC Pipe 2/inch T</td><td>" + abb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bbbBill = "";
+     bbb_q = 0;
+     showBill();
+    } else {
+     bbb_q = this.value;
+     bbbBill = "<tr><td>PVC Pipe 2/inch L</td><td>" + bbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("cbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     cbbBill = "";
+     cbb_q = 0;
+     showBill();
+    } else {
+     cbb_q = this.value;
+     cbbBill = "<tr><td>PVC Pipe 2/inch Shoket</td><td>" + cbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("dbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     dbbBill = "";
+     dbb_q = 0;
+     showBill();
+    } else {
+     dbb_q = this.value;
+     dbbBill = "<tr><td>Conduit casing  POLYCROME 1 inch</td><td>" + dbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ebb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ebbBill = "";
+     ebb_q = 0;
+     showBill();
+    } else {
+     ebb_q = this.value;
+     ebbBill = "<tr><td>Conduit casing  POLYCROME 2x1 inch</td><td>" + ebb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("fbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fbbBill = "";
+     fbb_q = 0;
+     showBill();
+    } else {
+     fbb_q = this.value;
+     fbbBill = "<tr><td>Conduit Clip 2/1</td><td>" + fbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("gbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gbbBill = "";
+     gbb_q = 0;
+     showBill();
+    } else {
+     gbb_q = this.value;
+     gbbBill = "<tr><td>Conduit Clip 4/3</td><td>" + gbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("hbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hbbBill = "";
+     hbb_q = 0;
+     showBill();
+    } else {
+     hbb_q = this.value;
+     hbbBill = "<tr><td>Conduit Clip 1</td><td>" + hbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ibb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ibbBill = "";
+     ibb_q = 0;
+     showBill();
+    } else {
+     ibb_q = this.value;
+     ibbBill = "<tr><td>GI Clip 2/1 </td><td>" + ibb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("jbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jbbBill = "";
+     jbb_q = 0;
+     showBill();
+    } else {
+     jbb_q = this.value;
+     jbbBill = "<tr><td>GI Clip 4/3</td><td>" + jbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("kbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kbbBill = "";
+     kbb_q = 0;
+     showBill();
+    } else {
+     kbb_q = this.value;
+     kbbBill = "<tr><td>GI Clip 1</td><td>" + kbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("lbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     lbbBill = "";
+     lbb_q = 0;
+     showBill();
+    } else {
+     lbb_q = this.value;
+     lbbBill = "<tr><td>insulation tape Kelani</td><td>" + lbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("mbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mbbBill = "";
+     mbb_q = 0;
+     showBill();
+    } else {
+     mbb_q = this.value;
+     mbbBill = "<tr><td>Pendant Lamp</td><td>" + mbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("nbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nbbBill = "";
+     nbb_q = 0;
+     showBill();
+    } else {
+     nbb_q = this.value;
+     nbbBill = "<tr><td>LED bulb 5w</td><td>" + nbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("obb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     obbBill = "";
+     obb_q = 0;
+     showBill();
+    } else {
+     obb_q = this.value;
+     obbBill = "<tr><td>LED bulb 7w</td><td>" + obb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("pbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     pbbBill = "";
+     pbb_q = 0;
+     showBill();
+    } else {
+     pbb_q = this.value;
+     pbbBill = "<tr><td>LED bulb 9w</td><td>" + pbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("qbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qbbBill = "";
+     qbb_q = 0;
+     showBill();
+    } else {
+     qbb_q = this.value;
+     qbbBill = "<tr><td>LED bulb 12w</td><td>" + qbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("rbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rbbBill = "";
+     rbb_q = 0;
+     showBill();
+    } else {
+     rbb_q = this.value;
+     rbbBill = "<tr><td>LED panel light 6w</td><td>" + rbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("sbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     sbbBill = "";
+     sbb_q = 0;
+     showBill();
+    } else {
+     sbb_q = this.value;
+     sbbBill = "<tr><td>LED panel light  12w</td><td>" + sbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("tbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     tbbBill = "";
+     tbb_q = 0;
+     showBill();
+    } else {
+     tbb_q = this.value;
+     tbbBill = "<tr><td>Wall Lamp living</td><td>" + tbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ubb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ubbBill = "";
+     ubb_q = 0;
+     showBill();
+    } else {
+     ubb_q = this.value;
+     ubbBill = "<tr><td>Wall Lamp dining</td><td>" + ubb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("vbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vbbBill = "";
+     vbb_q = 0;
+     showBill();
+    } else {
+     vbb_q = this.value;
+     vbbBill = "<tr><td>Wall Lamp room </td><td>" + vbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("wbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wbbBill = "";
+     wbb_q = 0;
+     showBill();
+    } else {
+     wbb_q = this.value;
+     wbbBill = "<tr><td>Wall Lamp veranda</td><td>" + wbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("xbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xbbBill = "";
+     xbb_q = 0;
+     showBill();
+    } else {
+     xbb_q = this.value;
+     xbbBill = "<tr><td>Outdoor down lights</td><td>" + xbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ybb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ybbBill = "";
+     ybb_q = 0;
+     showBill();
+    } else {
+     ybb_q = this.value;
+     ybbBill = "<tr><td>Outdoor up and down lights</td><td>" + ybb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("zbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zbbBill = "";
+     zbb_q = 0;
+     showBill();
+    } else {
+     zbb_q = this.value;
+     zbbBill = "<tr><td>Sport Light</td><td>" + zbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+
+
+
+
+document.getElementById("aabb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     aabbBill = "";
+     aabb_q = 0;
+     showBill();
+    } else {
+     aabb_q = this.value;
+     aabbBill = "<tr><td>Fasher Light 10w</td><td>" + aabb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bbbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bbbbBill = "";
+     bbbb_q = 0;
+     showBill();
+    } else {
+     bbbb_q = this.value;
+     bbbbBill = "<tr><td>Fasher Light 20w</td><td>" + bbbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ccbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ccbbBill = "";
+     ccbb_q = 0;
+     showBill();
+    } else {
+     ccbb_q = this.value;
+     ccbbBill = "<tr><td>Fasher Light 50w</td><td>" + ccbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ddbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ddbbBill = "";
+     ddbb_q = 0;
+     showBill();
+    } else {
+     ddbb_q = this.value;
+     ddbbBill = "<tr><td>Track light</td><td>" + ddbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("eebb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eebbBill = "";
+     eebb_q = 0;
+     showBill();
+    } else {
+     eebb_q = this.value;
+     eebbBill = "<tr><td>Track Bar</td><td>" + eebb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ffbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ffbbBill = "";
+     ffbb_q = 0;
+     showBill();
+    } else {
+     ffbb_q = this.value;
+     ffbbBill = "<tr><td>Celing Fan</td><td>" + ffbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ggbb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ggbbBill = "";
+     ggbb_q = 0;
+     showBill();
+    } else {
+     ggbb_q = this.value;
+     ggbbBill = "<tr><td>Wall Fan</td><td>" + ggbb_q + " </td></tr>";
+     showBill();
+    }
+   });
+   function showBill() {
+    document.getElementById("bill").innerHTML = smosaBill + kachoriBill + vadapavBill + dBill + eBill + fBill + gBill + hBill + iBill + jBill + kBill + lBill + mBill + nBill + oBill + pBill + qBill + rBill + sBill + tBill + uBill + vBill + wBill + xBill + yBill + zBill + aaBill + bbBill + ccBill + extraBill + ddBill + eeBill + ffBill + ggBill + hhBill + iiBill + jjBill + kkBill + llBill + mmBill + nnBill + ooBill + ppBill + qqBill + rrBill + ssBill + ttBill + uuBill + vvBill + wwBill + xxBill + yyBill + zzBill + aaaBill + bbbBill + cccBill + dddBill + eeeBill + fffBill + gggBill + hhhBill + iiiBill + jjjBill + kkkBill + lllBill + mmmBill + nnnBill + oooBill + pppBill + qqqBill + rrrBill + sssBill + tttBill + uuuBill + vvvBill + wwwBill + xxxBill + yyyBill + zzzBill + abBill + bzbBill + cbBill + dbBill + ebBill + fbBill + gbBill + hbBill + ibBill + jbBill + kbBill + lbBill+ mbBill + nbBill + obBill + pbBill + qbBill + rbBill + sbBill + tbBill + ubBill + vbBill + wbBill + xbBill + ybBill + zbBill + abbBill + bbbBill + cbbBill + dbbBill + ebbBill + fbbBill + gbbBill + hbbBill + ibbBill + jbbBill + kbbBill + lbbBill + mbbBill + nbbBill + obbBill + pbbBill+ qbbBill + rbbBill + sbbBill + tbbBill + ubbBill + vbbBill + wbbBill + xbbBill + ybbBill  + zbbBill+ aabbBill + bbbbBill + ccbbBill + ddbbBill + eebbBill + ffbbBill + ggbbBill;
+   <!--  document.getElementById("bill").innerHTML = smosaBill + kachoriBill + vadapavBill + dBill + eBill + fBill + gBill + hBill + iBil + jBill + kBill + lBill + mBill + nBill + oBill + pBill + qBill + rBill + sBill + tBill + uBill + vBill + wBill + xBill + yBill + zBill + aaBill + bbBill + ccBill + ddBill + eeBill + ffBill + ggBill + hhBill + iiBil + jjBill + kkBill + llBill + mmBill + nnBill + ooBill + ppBill + qqBill + rrBill + ssBill + ttBill + uuBill + vvBill + wwBill + xxBill + yyBill + zzBill+ aaaBill + bbbBill + cccBill + dddBill + eeeBill + fffBill + gggBill + hhhBill + iiiBil + jjjBill + kkkBill + lllBill + mmmBill + nnnBill + oooBill + pppBill + qqqBill + rrrBill + sssBill + tttBill + uuuBill + vvvBill + wwwBill + xxxBill + yyyBill + zzzBill + abBill + bbBill + cbBill + dbBill + ebBill + fbBill + gbBill + hbBill + ibBil + jbBill + kbBill + lbBill + mbBill + nbBill + obBill + pbBill + qbBill + rbBill + sbBill + tbBill + ubBill + vbBill + wbBill + xbBill + ybBill + zbBill + abbBill + bbbBill + cbbBill + dbbBill + ebbBill + fbbBill + gbbBill + hbbBill + ibbBil + jbbBill + kbbBill + lbbBill + mbbBill + nbbBill + obbBill + pbbBill + qbbBill + rbbBill + sbbBill + tbbBill + ubbBill + vbbBill + wbbBill + xbbBill + ybbBill + zbbBill+ aabbBill + bbbbBill + ccbbBill + ddbbBill + eebbBill + ffbbBill + ggbbBill;-->
+   <!-- document.getElementById("amount").innerHTML = Smosa * smosa_q + Kachori * kachori_q + Vadapav * vadapav_q + D * d_q; -->
+   }
+   let div = document.querySelector(".container1");
+        let btn = document.querySelector(".download");
+        btn.addEventListener('click', () => {
+            html2pdf().from(div).save()
+        })
+  </script>
+ </body>
+</html>
